@@ -1,495 +1,320 @@
-/* =========================
-   GLOBAL STYLES
-========================= */
-
+```css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-h1, h2, h3 {
-    color: #123b5d;
-}
-
-section {
-    padding: 70px 8%;
+body {
+    background: #f8fbfd;
+    color: #1f2937;
+    opacity: 1;
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* HEADER */
 
 header {
-    background: white;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.navbar {
-    height: 80px;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8%;
+    padding: 20px 8%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #123b5d;
+    font-size: 26px;
+    font-weight: 800;
+    color: #0ea5e9;
 }
 
-.logo span {
-    color: #18a999;
-}
-
-.nav-links {
+nav {
     display: flex;
     gap: 30px;
 }
 
-.nav-links a {
+nav a {
+    text-decoration: none;
+    color: #374151;
     font-weight: 600;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #18a999;
-}
-
-.menu-toggle {
-    display: none;
-    border: none;
-    background: none;
-    font-size: 30px;
-    cursor: pointer;
+nav a:hover {
+    color: #0ea5e9;
 }
 
 
+/* BUTTONS */
 
-/* =========================
-   BUTTONS
-========================= */
-
-.btn {
-    display: inline-block;
-    background: #18a999;
+button {
+    background: #0ea5e9;
     color: white;
-    padding: 14px 30px;
+    border: none;
+    padding: 14px 28px;
     border-radius: 30px;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: .3s;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #117a70;
+button:hover {
     transform: translateY(-3px);
+    background: #0284c7;
+}
+
+.secondary {
+    background: white;
+    color: #0ea5e9;
+    border: 2px solid #0ea5e9;
 }
 
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 90vh;
     display: flex;
     align-items: center;
+    padding: 0 8%;
+
     background:
     linear-gradient(
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.45)
+        rgba(14, 165, 233, 0.75),
+        rgba(14, 165, 233, 0.75)
     ),
-    url("../images/hero.jpg");
+    url("images/hero.jpg");
 
     background-size: cover;
     background-position: center;
 }
 
-
 .hero-content {
     max-width: 650px;
-    color:white;
+    color: white;
 }
 
 .hero h1 {
-    color:white;
-    font-size: 55px;
-    line-height: 1.2;
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    color:white;
     font-size: 20px;
-    margin-top:20px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.trust {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.trust div {
+    background: white;
+    color: #111827;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: 600;
 }
 
 
+/* GENERAL SECTIONS */
 
-/* =========================
-   PAGE HERO
-========================= */
-
-.page-hero {
-    background:#123b5d;
-    color:white;
-    text-align:center;
-    padding:90px 8%;
+section {
+    padding: 80px 8%;
 }
 
-.page-hero h1 {
-    color:white;
-    font-size:45px;
-}
-
-.page-hero p {
-    color:white;
-    margin-top:15px;
+section h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
 }
 
 
+/* SERVICES */
 
-/* =========================
-   SERVICES
-========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
 
-.services-preview,
-.all-services {
-    text-align:center;
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+
+    box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 25px;
 }
 
 
-.service-container,
-.service-grid {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:40px;
-}
-
-
-.service-card {
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-
-.service-card:hover {
-    transform:translateY(-8px);
-}
-
-
-.service-card h3 {
-    margin-bottom:15px;
-}
-
-
-.service-card li {
-    margin:8px 0;
-}
-
-
-
-/* =========================
-   WHY US
-========================= */
-
-.why-us {
-    background:#f4f9f9;
-    text-align:center;
-}
-
+/* FEATURES */
 
 .features {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 45px;
+    color: #0ea5e9;
 }
 
 
+/* REVIEWS */
 
-/* =========================
-   TESTIMONIALS
-========================= */
+.review {
+    max-width: 600px;
+    margin: auto;
 
-.testimonials {
-    text-align:center;
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.review p:first-child {
+    color: #fbbf24;
+    font-size: 30px;
 }
 
 
-.testimonial-container {
-    display:flex;
-    gap:30px;
-    margin-top:40px;
+/* QUOTE */
+
+.quote {
+    background: #0ea5e9;
+    color: white;
+    text-align: center;
+}
+
+.quote h2 {
+    color: white;
 }
 
 
-.testimonial {
-    flex:1;
-    padding:30px;
-    background:#f5f5f5;
-    border-radius:15px;
+/* CONTACT */
+
+form {
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input,
+textarea {
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
 }
 
 
-
-/* =========================
-   PRICING
-========================= */
-
-.pricing {
-    text-align:center;
-}
-
-
-.pricing-container {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:40px;
-}
-
-
-.price-card {
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-}
-
-
-.price-card h4 {
-    font-size:35px;
-    color:#18a999;
-    margin:20px;
-}
-
-
-.featured {
-    border:3px solid #18a999;
-}
-
-
-
-/* =========================
-   FAQ
-========================= */
-
-.faq {
-    background:#f4f9f9;
-}
-
-
-.faq-item {
-    margin:25px 0;
-}
-
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-content {
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-}
-
-
-.mission {
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-}
-
-
-.mission-box {
-    padding:35px;
-    background:#f5f5f5;
-    border-radius:15px;
-}
-
-
-
-/* =========================
-   TEAM
-========================= */
-
-.team {
-    text-align:center;
-}
-
-
-.team-container {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:40px;
-}
-
-
-.team-card {
-    padding:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-    border-radius:15px;
-}
-
-
-.team-image {
-    height:180px;
-    background:#ddd;
-    border-radius:50%;
-    margin-bottom:20px;
-}
-
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    text-align:center;
-    background:#f4f9f9;
-}
-
-
-.contact-form {
-    max-width:600px;
-    margin:30px auto;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-
-.contact-form input,
-.contact-form textarea {
-    padding:15px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
-}
-
-
-.contact-form textarea {
-    height:150px;
-}
-
-
-
-/* =========================
-   BUSINESS INFO
-========================= */
-
-.business-info {
-    display:flex;
-    justify-content:center;
-    gap:100px;
-    text-align:center;
-}
-
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-    background:#123b5d;
-    color:white;
-    text-align:center;
-    padding:40px 8%;
-}
-
-footer h3 {
-    color:white;
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 40px;
 }
 
 
+/* SCROLL ANIMATIONS */
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
 
-@media(max-width:900px){
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    .nav-links {
-        display:none;
-        position:absolute;
-        top:80px;
-        right:0;
-        background:white;
-        width:100%;
-        flex-direction:column;
-        text-align:center;
-        padding:30px;
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
     }
 
-
-    .nav-links.active {
-        display:flex;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-
-
-    .menu-toggle {
-        display:block;
-    }
-
 
     .hero h1 {
-        font-size:40px;
+        font-size: 40px;
     }
 
-
-    .service-container,
-    .service-grid,
-    .features,
-    .pricing-container,
-    .team-container,
-    .mission {
-        grid-template-columns:1fr;
+    .cards {
+        grid-template-columns: 1fr;
     }
 
-
-    .testimonial-container {
-        flex-direction:column;
+    .features {
+        flex-direction: column;
     }
 
-
-    .business-info {
-        flex-direction:column;
-        gap:30px;
+    .trust {
+        flex-direction: column;
     }
 
+    .hero-buttons {
+        flex-direction: column;
+    }
 }
+```

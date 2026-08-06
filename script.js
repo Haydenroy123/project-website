@@ -1,71 +1,171 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+```javascript id="8v2m0m"
+// FreshNest Cleaning Website Interactions
 
 
-// Mobile menu toggle
-if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-}
+// Smooth scroll for buttons
 
+document.querySelectorAll("button").forEach(button => {
 
-// Close mobile menu when clicking a link
-const navItems = document.querySelectorAll(".nav-links a");
+    button.addEventListener("click", () => {
 
-navItems.forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
-});
+        if(button.innerText.includes("Quote") || button.innerText.includes("Book")) {
 
+            document.querySelector("#contact").scrollIntoView({
+                behavior: "smooth"
+            });
 
-// Simple fade-in animation on scroll
-const sections = document.querySelectorAll("section");
-
-const revealSections = () => {
-
-    sections.forEach(section => {
-
-        const sectionTop = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight * 0.85;
-
-
-        if(sectionTop < screenPosition){
-            section.style.opacity = "1";
-            section.style.transform = "translateY(0)";
         }
 
     });
 
-};
-
-
-sections.forEach(section => {
-    section.style.opacity = "0";
-    section.style.transform = "translateY(30px)";
-    section.style.transition = "all .7s ease";
 });
 
 
-window.addEventListener("scroll", revealSections);
 
-revealSections();
+// Scroll reveal animation
+
+const sections = document.querySelectorAll("section, .card, .review, .features div");
 
 
-// Contact form demo message
-const contactForm = document.querySelector(".contact-form");
+const observer = new IntersectionObserver(entries => {
 
-if(contactForm){
+    entries.forEach(entry => {
 
-    contactForm.addEventListener("submit", (event)=>{
+        if(entry.isIntersecting){
 
-        event.preventDefault();
+            entry.target.classList.add("show");
 
-        alert("Thanks for contacting SparklePro! We will get back to you soon.");
-
-        contactForm.reset();
+        }
 
     });
 
-}w
+}, {
+    threshold: .15
+});
+
+
+sections.forEach(section => {
+
+    section.classList.add("hidden");
+
+    observer.observe(section);
+
+});
+
+
+
+
+// Animated numbers
+
+const numbers = document.querySelectorAll(".features h3");
+
+
+numbers.forEach(number => {
+
+
+    let target = parseInt(number.innerText);
+
+    let count = 0;
+
+
+    let interval = setInterval(()=>{
+
+
+        count += Math.ceil(target / 50);
+
+
+        if(count >= target){
+
+            count = target;
+
+            clearInterval(interval);
+
+        }
+
+
+        if(number.innerText.includes("%")){
+
+            number.innerText = count + "%";
+
+        }
+
+        else if(number.innerText.includes("Years")){
+
+            number.innerText = count + " Years";
+
+        }
+
+        else{
+
+            number.innerText = count + "+";
+
+        }
+
+
+    },40);
+
+
+});
+
+
+
+
+// Fake quote calculator
+
+const quoteButton = document.querySelector(".quote button");
+
+
+quoteButton.addEventListener("click", ()=>{
+
+
+    let size = prompt(
+        "What size home needs cleaning?\n\n1 - Apartment\n2 - Small Home\n3 - Large Home"
+    );
+
+
+    let price;
+
+
+    if(size === "1"){
+
+        price = "$80-$120";
+
+    }
+
+    else if(size === "2"){
+
+        price = "$120-$200";
+
+    }
+
+    else if(size === "3"){
+
+        price = "$200-$350";
+
+    }
+
+    else {
+
+        price = "Contact us for pricing";
+
+    }
+
+
+    alert(
+        "Your estimated cleaning price is: " + price
+    );
+
+
+});
+
+
+
+
+// Add loading effect
+
+window.addEventListener("load",()=>{
+
+    document.body.style.opacity = "1";
+
+});
+```
