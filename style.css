@@ -730,3 +730,24 @@ footer{
     }
 
 }
+.about-content,
+.mission-box,
+.team-card,
+.contact-form{
+    animation:fadeUp .8s ease both;
+}
+
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
