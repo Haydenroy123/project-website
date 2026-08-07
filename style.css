@@ -16,8 +16,16 @@ body{
     line-height:1.6;
 }
 
-/* Header */
+
+/* =========================
+   NAVBAR
+========================= */
+
 header{
+    width:100%;
+}
+
+.navbar{
     position:fixed;
     top:0;
     left:0;
@@ -33,40 +41,61 @@ header{
     backdrop-filter:blur(14px);
 
     z-index:1000;
-
-    transition:.3s ease;
 }
 
-header h2{
+
+.logo{
     color:white;
     font-size:1.8rem;
-    font-weight:700;
-    letter-spacing:.5px;
+    font-weight:800;
 }
 
-nav{
+
+.logo span{
+    color:#7dd3fc;
+}
+
+
+.nav-links{
     display:flex;
     gap:35px;
+    list-style:none;
 }
 
-nav a{
+
+.nav-links a{
     color:white;
     text-decoration:none;
     font-weight:600;
     transition:.3s ease;
 }
 
-nav a:hover{
+
+.nav-links a:hover{
     color:#7dd3fc;
 }
 
-/* Hero */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:30px;
+}
+
+
+/* =========================
+   HOME HERO
+========================= */
+
 .hero{
+
     height:100vh;
 
     background-image:
-        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-        url("images/hero-home.jpeg");
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("images/hero-home.jpeg");
 
     background-size:cover;
     background-position:center;
@@ -75,49 +104,458 @@ nav a:hover{
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
 
     padding:0 10%;
 }
 
+
 .hero-text{
-    max-width:800px;
+    max-width:850px;
     color:white;
 }
 
+
 .hero-text h1{
+
     font-size:clamp(3rem,7vw,5rem);
+
     line-height:1.1;
+
     margin-bottom:25px;
+
     font-weight:800;
 }
 
+
 .hero-text p{
+
     font-size:1.3rem;
+
     margin-bottom:40px;
-    opacity:.95;
+
 }
 
-/* Button */
+
+/* =========================
+   BUTTONS
+========================= */
+
+
 .btn{
+
     display:inline-block;
 
     padding:16px 40px;
 
-    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
 
     color:white;
+
     text-decoration:none;
+
     font-weight:700;
 
     border-radius:999px;
 
     transition:.3s ease;
 
-    box-shadow:0 12px 30px rgba(37,99,235,.35);
+    border:none;
+
+    cursor:pointer;
+
 }
 
+
 .btn:hover{
+
     transform:translateY(-4px);
-    box-shadow:0 20px 40px rgba(37,99,235,.45);
+
+    box-shadow:
+    0 20px 40px rgba(37,99,235,.35);
+
+}
+
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+
+.page-hero{
+
+    height:60vh;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+
+    url("images/hero-home.jpeg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    padding:20px;
+
+}
+
+
+
+.page-hero h1{
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+
+.about-section{
+
+    padding:100px 10%;
+
+    background:white;
+
+}
+
+
+.about-content{
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+
+.about-content h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* =========================
+   MISSION CARDS
+========================= */
+
+
+.mission{
+
+    padding:80px 10%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    background:#f8fafc;
+
+}
+
+
+
+.mission-box{
+
+    background:white;
+
+    padding:40px;
+
+    max-width:450px;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.08);
+
+
+    transition:.3s ease;
+
+}
+
+
+
+.mission-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/* =========================
+   TEAM
+========================= */
+
+
+.team{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+
+
+.team h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.team-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.team-card{
+
+    width:300px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.08);
+
+
+    transition:.3s ease;
+
+}
+
+
+
+.team-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.team-image{
+
+    height:200px;
+
+    background:#e5e7eb;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+
+.contact{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+    background:#f1f5f9;
+
+}
+
+
+
+.contact h2{
+
+    font-size:2.5rem;
+
+}
+
+
+
+.contact-form{
+
+    max-width:600px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea{
+
+
+    padding:16px;
+
+
+    border-radius:12px;
+
+
+    border:1px solid #d1d5db;
+
+
+    font-size:1rem;
+
+
+}
+
+
+
+.contact-form textarea{
+
+    min-height:150px;
+
+}
+
+
+
+/* =========================
+   BUSINESS INFO
+========================= */
+
+
+.business-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+
+    padding:70px 10%;
+
+
+    background:white;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:#0f172a;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+
+    .hero-text h1{
+
+        font-size:3rem;
+
+    }
+
+
+    .mission{
+
+        padding:50px 5%;
+
+    }
+
+
+    .business-info{
+
+        gap:30px;
+
+    }
+
 }
