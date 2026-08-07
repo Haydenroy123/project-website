@@ -5,40 +5,67 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Inter', Arial, Helvetica, sans-serif;
+    background:#f8fafc;
+    color:#1f2937;
+    line-height:1.6;
 }
 
 /* Header */
 header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 50px;
-    background:#0d5c63;
+
+    padding:22px 8%;
+
+    background:rgba(13,92,99,.85);
+    backdrop-filter:blur(14px);
+
+    z-index:1000;
+
+    transition:.3s ease;
 }
 
 header h2{
     color:white;
+    font-size:1.8rem;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    gap:35px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
-    font-weight:bold;
+    font-weight:600;
+    transition:.3s ease;
 }
 
 nav a:hover{
-    color:#ffd166;
+    color:#7dd3fc;
 }
 
-/* Hero Section */
+/* Hero */
 .hero{
     height:100vh;
 
     background-image:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
         url("images/hero-home.jpeg");
 
     background-size:cover;
@@ -49,32 +76,48 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
+
+    padding:0 10%;
 }
 
 .hero-text{
+    max-width:800px;
     color:white;
 }
 
 .hero-text h1{
-    font-size:60px;
-    margin-bottom:20px;
+    font-size:clamp(3rem,7vw,5rem);
+    line-height:1.1;
+    margin-bottom:25px;
+    font-weight:800;
 }
 
 .hero-text p{
-    font-size:24px;
-    margin-bottom:30px;
+    font-size:1.3rem;
+    margin-bottom:40px;
+    opacity:.95;
 }
 
+/* Button */
 .btn{
     display:inline-block;
-    background:#00a8e8;
+
+    padding:16px 40px;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
     color:white;
-    padding:15px 35px;
     text-decoration:none;
-    border-radius:5px;
-    font-weight:bold;
+    font-weight:700;
+
+    border-radius:999px;
+
+    transition:.3s ease;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.35);
 }
 
 .btn:hover{
-    background:#0077b6;
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(37,99,235,.45);
 }
