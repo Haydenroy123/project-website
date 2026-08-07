@@ -766,3 +766,146 @@ MOBILE
     }
 
 }
+/* =========================
+   WEBSITE POLISH
+   SPACING + TYPOGRAPHY
+========================= */
+
+
+h1,
+h2,
+h3{
+
+    font-family:'Manrope', Arial, sans-serif;
+
+    color:#111827;
+
+    letter-spacing:-0.04em;
+
+    line-height:1.15;
+
+}
+
+
+
+p{
+
+    max-width:700px;
+
+}
+
+
+
+
+
+/* Section spacing */
+
+.about-section,
+.team,
+.contact{
+
+    padding-top:120px;
+
+    padding-bottom:120px;
+
+}
+
+
+
+
+
+/* Better card depth */
+
+.mission-box,
+.team-card{
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.05);
+
+}
+
+
+
+.mission-box:hover,
+.team-card:hover{
+
+    box-shadow:
+
+    0 30px 60px rgba(0,0,0,.10);
+
+}
+
+
+
+
+
+/* Cleaner paragraphs */
+
+.about-content p,
+.page-hero p,
+.contact p{
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* Better team titles */
+
+.team-card h3{
+
+    margin-top:10px;
+
+    margin-bottom:8px;
+
+    font-size:1.35rem;
+
+}
+
+
+
+.team-card p{
+
+    color:#6b7280;
+
+}
+
+
+
+
+
+/* Better mission cards */
+
+.mission-box h2{
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+
+}
+
+
+
+.mission-box p{
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* Smooth page feel */
+
+section{
+
+    overflow:hidden;
+
+}
