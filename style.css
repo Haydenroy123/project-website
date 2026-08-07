@@ -751,3 +751,29 @@ footer{
     }
 
 }
+.team-image{
+
+    height:260px;
+
+    width:100%;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+}
+
+
+.team-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
