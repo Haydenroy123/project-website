@@ -1,4 +1,7 @@
-/* Reset */
+/* =========================
+   MODERN RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -10,9 +13,9 @@ html{
 }
 
 body{
-    font-family:'Inter', Arial, Helvetica, sans-serif;
-    background:#f8fafc;
-    color:#1f2937;
+    font-family:'Manrope', Arial, sans-serif;
+    background:#ffffff;
+    color:#111827;
     line-height:1.6;
 }
 
@@ -21,121 +24,164 @@ body{
    NAVBAR
 ========================= */
 
-header{
-    width:100%;
-}
-
 .navbar{
+
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:90%;
+    max-width:1200px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:22px 8%;
+    padding:18px 30px;
 
-    background:rgba(13,92,99,.85);
-    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,0,0,.08);
+
+    border-radius:50px;
 
     z-index:1000;
+
 }
 
 
 .logo{
-    color:white;
-    font-size:1.8rem;
+
+    font-size:1.5rem;
+
     font-weight:800;
+
+    color:#111827;
+
 }
 
 
 .logo span{
-    color:#7dd3fc;
+
+    color:#14b8a6;
+
 }
+
 
 
 .nav-links{
+
     display:flex;
+
     gap:35px;
+
     list-style:none;
+
 }
 
 
+
 .nav-links a{
-    color:white;
+
     text-decoration:none;
+
+    color:#374151;
+
     font-weight:600;
+
     transition:.3s ease;
+
 }
 
 
 .nav-links a:hover{
-    color:#7dd3fc;
+
+    color:#14b8a6;
+
 }
+
 
 
 .menu-toggle{
+
     display:none;
+
     background:none;
+
     border:none;
-    color:white;
-    font-size:30px;
+
+    font-size:28px;
+
 }
+
 
 
 /* =========================
    HOME HERO
 ========================= */
 
+
 .hero{
 
-    height:100vh;
-
-    background-image:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("images/hero-home.jpeg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    min-height:100vh;
 
     display:flex;
-    justify-content:center;
+
     align-items:center;
 
-    text-align:center;
+    padding:120px 8% 80px;
 
-    padding:0 10%;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #f0fdfa
+    );
+
 }
+
 
 
 .hero-text{
-    max-width:850px;
-    color:white;
+
+    max-width:700px;
+
+    animation:fadeUp .8s ease;
+
 }
+
 
 
 .hero-text h1{
 
-    font-size:clamp(3rem,7vw,5rem);
+    font-size:clamp(3rem,6vw,5.5rem);
 
-    line-height:1.1;
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    font-weight:800;
 
     margin-bottom:25px;
 
-    font-weight:800;
 }
+
 
 
 .hero-text p{
 
     font-size:1.3rem;
 
+    color:#4b5563;
+
     margin-bottom:40px;
 
 }
+
 
 
 /* =========================
@@ -145,39 +191,74 @@ header{
 
 .btn{
 
-    display:inline-block;
+    display:inline-flex;
 
-    padding:16px 40px;
+    align-items:center;
 
-    background:linear-gradient(
-        135deg,
-        #2563eb,
-        #3b82f6
-    );
+    justify-content:center;
+
+
+    padding:16px 35px;
+
+
+    background:#14b8a6;
+
 
     color:white;
 
+
+    border-radius:50px;
+
+
     text-decoration:none;
+
 
     font-weight:700;
 
-    border-radius:999px;
-
-    transition:.3s ease;
 
     border:none;
 
+
     cursor:pointer;
 
+
+    transition:.3s ease;
+
+
 }
+
 
 
 .btn:hover{
 
     transform:translateY(-4px);
 
-    box-shadow:
-    0 20px 40px rgba(37,99,235,.35);
+    background:#0d9488;
+
+}
+
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+
+.hero{
+
+    background-image:
+
+    linear-gradient(
+    rgba(255,255,255,.85),
+    rgba(255,255,255,.85)
+    ),
+
+    url("images/hero-home.jpeg");
+
+
+    background-size:cover;
+
+    background-position:center;
 
 }
 
@@ -190,19 +271,7 @@ header{
 
 .page-hero{
 
-    height:60vh;
-
-    background:
-
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-
-    url("images/hero-home.jpeg");
-
-
-    background-size:cover;
-
-    background-position:center;
-
+    min-height:55vh;
 
     display:flex;
 
@@ -210,14 +279,13 @@ header{
 
     align-items:center;
 
-
     text-align:center;
 
 
-    color:white;
+    padding:150px 10% 80px;
 
 
-    padding:20px;
+    background:#f0fdfa;
 
 }
 
@@ -225,26 +293,42 @@ header{
 
 .page-hero h1{
 
-    font-size:clamp(2.5rem,5vw,4rem);
+    font-size:clamp(3rem,6vw,5rem);
 
-    margin-bottom:15px;
+    letter-spacing:-2px;
+
+    margin-bottom:20px;
 
 }
+
+
+
+.page-hero p{
+
+    max-width:700px;
+
+    font-size:1.2rem;
+
+    color:#4b5563;
+
+}
+
 
 
 
 /* =========================
-   ABOUT PAGE
+   SECTIONS
 ========================= */
 
 
-.about-section{
+.about-section,
+.team,
+.contact{
 
-    padding:100px 10%;
-
-    background:white;
+    padding:100px 8%;
 
 }
+
 
 
 .about-content{
@@ -256,9 +340,13 @@ header{
 }
 
 
-.about-content h2{
+.about-content h2,
+.team h2,
+.contact h2{
 
-    font-size:2.5rem;
+    font-size:3rem;
+
+    letter-spacing:-1px;
 
     margin-bottom:25px;
 
@@ -266,24 +354,23 @@ header{
 
 
 
+
 /* =========================
-   MISSION CARDS
+   MISSION
 ========================= */
 
 
 .mission{
 
-    padding:80px 10%;
+    padding:80px 8%;
 
     display:flex;
 
-    justify-content:center;
-
     gap:30px;
 
-    flex-wrap:wrap;
+    justify-content:center;
 
-    background:#f8fafc;
+    background:#f9fafb;
 
 }
 
@@ -291,19 +378,18 @@ header{
 
 .mission-box{
 
-    background:white;
+    max-width:450px;
 
     padding:40px;
 
-    max-width:450px;
+
+    background:white;
 
 
-    border-radius:20px;
+    border-radius:25px;
 
 
-    box-shadow:
-
-    0 20px 40px rgba(0,0,0,.08);
+    border:1px solid #e5e7eb;
 
 
     transition:.3s ease;
@@ -314,9 +400,10 @@ header{
 
 .mission-box:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
 }
+
 
 
 
@@ -327,19 +414,7 @@ header{
 
 .team{
 
-    padding:100px 10%;
-
     text-align:center;
-
-}
-
-
-
-.team h2{
-
-    font-size:2.5rem;
-
-    margin-bottom:40px;
 
 }
 
@@ -351,9 +426,9 @@ header{
 
     justify-content:center;
 
-    gap:30px;
-
     flex-wrap:wrap;
+
+    gap:30px;
 
 }
 
@@ -363,16 +438,16 @@ header{
 
     width:300px;
 
-    background:white;
-
     padding:30px;
 
-    border-radius:20px;
+
+    background:white;
 
 
-    box-shadow:
+    border-radius:25px;
 
-    0 20px 40px rgba(0,0,0,.08);
+
+    border:1px solid #e5e7eb;
 
 
     transition:.3s ease;
@@ -383,7 +458,7 @@ header{
 
 .team-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
 }
 
@@ -391,15 +466,18 @@ header{
 
 .team-image{
 
-    height:200px;
+    height:220px;
 
-    background:#e5e7eb;
+    background:#d1fae5;
 
-    border-radius:15px;
+
+    border-radius:20px;
+
 
     margin-bottom:20px;
 
 }
+
 
 
 
@@ -410,19 +488,9 @@ header{
 
 .contact{
 
-    padding:100px 10%;
+    background:#f0fdfa;
 
     text-align:center;
-
-    background:#f1f5f9;
-
-}
-
-
-
-.contact h2{
-
-    font-size:2.5rem;
 
 }
 
@@ -434,11 +502,12 @@ header{
 
     margin:40px auto;
 
+
     display:flex;
 
     flex-direction:column;
 
-    gap:15px;
+    gap:18px;
 
 }
 
@@ -448,16 +517,19 @@ header{
 .contact-form textarea{
 
 
-    padding:16px;
+    padding:18px;
 
 
-    border-radius:12px;
+    border-radius:15px;
 
 
     border:1px solid #d1d5db;
 
 
     font-size:1rem;
+
+
+    background:white;
 
 
 }
@@ -472,6 +544,8 @@ header{
 
 
 
+
+
 /* =========================
    BUSINESS INFO
 ========================= */
@@ -479,21 +553,20 @@ header{
 
 .business-info{
 
+    padding:70px 8%;
+
+
     display:flex;
 
     justify-content:center;
 
-    gap:80px;
+    gap:100px;
 
     flex-wrap:wrap;
 
 
-    padding:70px 10%;
-
-
-    background:white;
-
 }
+
 
 
 
@@ -504,13 +577,43 @@ header{
 
 footer{
 
-    text-align:center;
+    padding:50px 8%;
 
-    padding:40px;
-
-    background:#0f172a;
+    background:#111827;
 
     color:white;
+
+    text-align:center;
+
+}
+
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+
+@keyframes fadeUp{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
 
 }
 
@@ -524,38 +627,50 @@ footer{
 @media(max-width:768px){
 
 
-    .nav-links{
+.nav-links{
 
-        display:none;
+    display:none;
 
-    }
-
-
-    .menu-toggle{
-
-        display:block;
-
-    }
+}
 
 
-    .hero-text h1{
+.menu-toggle{
 
-        font-size:3rem;
+    display:block;
 
-    }
-
-
-    .mission{
-
-        padding:50px 5%;
-
-    }
+}
 
 
-    .business-info{
 
-        gap:30px;
+.hero{
 
-    }
+    padding:130px 7% 80px;
+
+}
+
+
+
+.hero-text h1{
+
+    font-size:3rem;
+
+}
+
+
+
+.mission{
+
+    flex-direction:column;
+
+}
+
+
+
+.business-info{
+
+    gap:40px;
+
+}
+
 
 }
